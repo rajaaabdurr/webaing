@@ -113,7 +113,7 @@
   </div>
 
   <div class="form-group">
-      <label>Tanggal Lahir:</label>
+      <label>Tanggal Pesan:</label>
       <input name="tanggal_lahir"  value="<?php echo $tanggal_lahir; ?>" type="date" class="form-control">
   </div>
 

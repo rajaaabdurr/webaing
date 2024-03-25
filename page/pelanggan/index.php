@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <!--Bagian heading -->
-  <h1 class="h3 mb-2 text-gray-800">Pelanggan</h1>
-  <p class="mb-4">Halaman pelanggan berisi informasi seluruh pelanggan yang dapat di kelola oleh admin.</p>
+  <h1 class="h3 mb-2 text-gray-800">Entri Meja & Order</h1>
+  <p class="mb-4">Halaman Entri Meja & Order berisi informasi seluruh pelanggan yang dapat di kelola oleh admin.</p>
   <a href="index.php?page=dashboard"><button class="btn btn-primary"><i class="fa fa-angle-left"></i> Halaman Dashboard</button></a>
   <br /><br />
   <?php
@@ -37,9 +37,6 @@
       <!-- Tombol tambah pelanggan -->
       <button class="btn-tambah btn btn-dark btn-icon-split"><span class="text">Tambah</span></button>
       &nbsp;&nbsp;
-      <!-- Tombol export pdf -->
-      <a href="page/pelanggan/cetak/cetak_pelanggan_pdf.php?" target='blank' class="btn btn-danger btn-icon-split"><span class="text"><i class="fas fa-file-pdf"></i> Export PDF</span></a>
-      &nbsp;&nbsp;
       <!-- Tombol export excel-->
       <a href="page/pelanggan/cetak/cetak_pelanggan_excel.php?" target='blank' class="btn btn-success btn-icon-split"><span class="text"><i class="fas fa-file-excel"></i> Export Excel</span></a>
 
@@ -62,13 +59,13 @@
         <table class="table table-bordered table-striped" id="dataTable" width="100%" cellspacing="0">
           <thead>
             <tr>
-              <th>No</th>
+              <th>Nomor Meja</th>
               <th>Kode</th>
               <th>Nama Pelanggan</th>
               <th>No Telp</th>
               <th>Alamat</th>
               <th>Jenis Kelamin</th>
-              <th>Tanggal Lahir</th>
+              <th>Tanggal Pesan</th>
               <th>Status</th>
               <th>Aksi</th>
             </tr>

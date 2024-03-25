@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <!--Bagian heading -->
-  <h1 class="h3 mb-2 text-gray-800">Produk</h1>
-  <p class="mb-4">Halaman produk berisi informasi seluruh produk yang dapat di kelola oleh admin.</p>
+  <h1 class="h3 mb-2 text-gray-800">Entri Barang</h1>
+  <p class="mb-4">Halaman Entri Barang berisi informasi seluruh produk yang dapat di kelola oleh admin.</p>
   <a href="index.php?page=dashboard"><button class="btn btn-primary"><i class="fa fa-angle-left"></i> Halaman Dashboard</button></a>
   <br /><br />
   <?php
@@ -59,12 +59,11 @@
             <tr>
               <th>No</th>
               <th>Kode</th>
-              <th>Nama Produk</th>
+              <th>Menu</th>
               <th>Satuan</th>
               <th>Kategori Produk</th>
-              <th>Supplier</th>
               <th>Stok</th>
-              <th>Harga Beli</th>
+              <th>Harga Normal</th>
               <th>Harga Jual</th>
               <th width="13%">Aksi</th>
             </tr>
@@ -102,12 +101,11 @@
                 <td><?php echo $data['nama_produk']; ?></td>
                 <td><?php echo $data['satuan']; ?></td>
                 <td><?php echo $data['nama_kt_produk']; ?></td>
-                <td><?php echo $data['nama_supplier']; ?></td>
                 <td><?php echo $data['stok_produk']; ?></td>
                 <td>Rp. <?php echo number_format($data['harga_beli'], 2, ',', '.'); ?></td>
                 <td>Rp. <?php echo number_format($data['harga_jual'], 2, ',', '.'); ?></td>
                 <td>
-                  <button class="btn-gambar btn btn-info btn-circle" id_produk="<?php echo $data['id_produk']; ?>" kode_produk="<?php echo $data['kode_produk']; ?>" data-toggle="tooltip" title="Lihat gambar" data-placement="top"><i class="fas fa-image"></i></button>
+
                   <button class="btn-edit btn btn-warning btn-circle" id_produk="<?php echo $data['id_produk']; ?>" kode_produk="<?php echo $data['kode_produk']; ?>" data-toggle="tooltip" title="Edit Produk" data-placement="top"><i class="fas fa-edit"></i></button>
                   <button class="btn-hapus btn btn-danger btn-circle" id_produk="<?php echo $data['id_produk']; ?>" kode_produk="<?php echo $data['kode_produk']; ?>" gambar_produk="<?php echo $data['gambar_produk']; ?>" data-toggle="tooltip" title="Hapus Produk" data-placement="top"><i class="fas fa-trash"></i></button>
                 </td>

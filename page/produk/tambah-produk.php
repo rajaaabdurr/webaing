@@ -88,13 +88,13 @@ session_start();
     <div class="row">
         <div class="col-sm-10">
             <div class="form-group">
-                <label>Nama Produk:</label>
+                <label>Menu:</label>
                 <input name="nama_produk" type="text" class="form-control" placeholder="Masukan nama" required>
             </div>
         </div>
         <div class="col-sm-2">
             <div class="form-group">
-                <label>Kode Produk:</label>
+                <label>Kode:</label>
                 <h3><?php echo $kodeProduk; ?></h3>
                 <input name="kode_produk" value="<?php echo $kodeProduk; ?>" type="hidden" class="form-control">
             </div>
@@ -136,8 +136,8 @@ session_start();
     <div class="row">
         <div class="col-sm-6">
             <div class="form-group">
-                <label>Harga Beli:</label>
-                <input name="harga_beli" type="number" class="form-control" placeholder="Masukan harga beli" required>
+                <label>Harga Normal:</label>
+                <input name="harga_beli" type="number" class="form-control" placeholder="Masukan harga normal" required>
             </div>
         </div>
         <div class="col-sm-6">
@@ -147,26 +147,9 @@ session_start();
             </div>
         </div>
     </div>
-    <!-- rows -->   
-    <div class="row">
-        <div class="col-sm-6">
-            <div class="form-group">
-                <div id="msg"></div>
-                <label>Gambar Produk:</label>
-                <input type="file" name="gambar_produk" class="file" >
-                    <div class="input-group my-3">
-                        <input type="text" class="form-control" disabled placeholder="Upload Gambar" id="file">
-                        <div class="input-group-append">
-                                <button type="button" id="pilih_gambar" class="browse btn btn-dark">Pilih</button>
-                        </div>
-                    </div>
-                <img src="assets/img/img80.png" id="preview" class="img-thumbnail">
-            </div>
+   
         </div>
-        <div class="col-sm-6">
-            <div class="form-group">
-                <label>Dari Suplier:</label><br>
-                <select name="supplier" class="form-control">
+        
                     <!-- Menampilkan daftar supplier di dalam select list -->
                     <?php
                     $sql="select * from supplier order by id_supplier desc";

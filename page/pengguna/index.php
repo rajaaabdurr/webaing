@@ -11,10 +11,14 @@ if (isset($_GET['pengguna'])) {
       $pengguna = "Kasir";
       $aksi = "";
       break;
-    case 'Manajer':
-      $pengguna = "Manajer";
+    case 'Owner':
+      $pengguna = "Owner";
       $aksi = "";
       break;
+    case 'Waiter':
+        $pengguna = "Waiter";
+        $aksi = "";
+        break;
     default:
       echo "<center><h3>Pengguna tidak valid !</h3></center>";
       break;

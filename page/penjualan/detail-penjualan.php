@@ -129,12 +129,8 @@ $no_invoice = $data['no_invoice'];
                         </tbody>
                     </table>
                 </div>
-                <!-- Tombol cetak invoice -->
-                <a href="page/penjualan/cetak/cetak-detail-penjualan.php?no_invoice=<?php echo $data['no_invoice']; ?>" target='blank' class="btn btn-primary btn-icon-split"><span class="text"><i class="fas fa-print"></i> Cetak Invoice</span></a>
                 <a href="page/penjualan/cetak/cetak-detail-penjualan-thermal.php?no_invoice=<?php echo $data['no_invoice']; ?>" target='blank' class="btn btn-success btn-icon-split"><span class="text"><i class="fas fa-print"></i> Print Thermal</span></a>
-                <a href="page/penjualan/cetak/cetak-detail-penjualan-pdf.php?no_invoice=<?php echo $data['no_invoice']; ?>" target='blank' class="btn btn-danger btn-icon-pdf"><span class="text"><i class="fas fa-file-pdf"></i> Export PDF</span></a>
-            </div>
-            <!--rows -->
+                            </div>
         </div>
     </div>
 </div>

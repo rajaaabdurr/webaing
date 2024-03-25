@@ -20,12 +20,12 @@ $data = mysqli_fetch_array($hasil);
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>KASIR YAN</title>
+  <title>Mamma Mia Trattoria</title>
 
   <!-- Custom fonts for this template -->
   <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="assets/font/font.css" rel="stylesheet">
-  <link href='page/aplikasi/logo/shop.png' rel='shortcut icon'>
+  <link href='page/aplikasi/logo/kopi.png' rel='shortcut icon'>
   <!-- Custom styles for this template -->
   <link href="assets/css/sb-admin-2.min.css" rel="stylesheet">
   <!-- Chart.js -->
@@ -47,7 +47,7 @@ $data = mysqli_fetch_array($hasil);
   <div id="wrapper">
 
     <!-- Sidebar -->
-    <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-image: linear-gradient(180deg, #2c3e50 10%, #34495e 100%);">
+    <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-image: linear-gradient(180deg, #691b13 20%, #e9dcb8 100%);">
 
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php?page=dashboard">
@@ -80,24 +80,24 @@ $data = mysqli_fetch_array($hasil);
           </div>
         </div>
       </li>
-      <?php if ($_SESSION["level"] == "Admin" || $_SESSION["level"] == "Manajer") : ?>
-        <!-- Nav Item - Pages Collapse Menu -->
+      <?php if ($_SESSION["level"] == "Waiter") : ?>
+        
         <li class="nav-item">
-          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#laporan" aria-expanded="true" aria-controls="collapseTwo">
-            <i class="fas fa-book"></i>
-            <span>Laporan Penjualan</span>
+          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#master_data" aria-expanded="true" aria-controls="collapseTwo">
+            <i class="fas fa-database"></i>
+            <span>Data</span>
           </a>
-          <div id="laporan" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div id="master_data" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-              <a class="collapse-item" href="index.php?page=laporan&isi=item">Berdasarkan Item</a>
-              <a class="collapse-item" href="index.php?page=laporan&isi=produk">Berdasarkan Produk</a>
-              <a class="collapse-item" href="index.php?page=laporan&isi=kasir">Berdasarkan Kasir</a>
+              <a class="collapse-item" href="index.php?page=produk">Entri Barang</a>
+              <a class="collapse-item" href="index.php?page=pelanggan">Entri Order</a>
+              
             </div>
           </div>
         </li>
-      <?php endif; ?>
 
-      <?php if ($_SESSION["level"] == "Admin") : ?>
+      <?php endif; ?>
+      <?php if ($_SESSION["level"] == "Owner") : ?>
 
         <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item">
@@ -109,11 +109,15 @@ $data = mysqli_fetch_array($hasil);
             <div class="bg-white py-2 collapse-inner rounded">
               <a class="collapse-item" href="index.php?page=pengguna&pengguna=Admin">Admin</a>
               <a class="collapse-item" href="index.php?page=pengguna&pengguna=Kasir">Kasir</a>
+              <a class="collapse-item" href="index.php?page=pengguna&pengguna=Waiter">Waiter</a>
+              <a class="collapse-item" href="index.php?page=pengguna&pengguna=Owner">Owner</a>
              
             </div>
           </div>
         </li>
-        <!-- Nav Item - Pages Collapse Menu -->
+        
+      <?php endif; ?>
+      <?php if ($_SESSION["level"] == "Admin") : ?>
         
         <li class="nav-item">
           <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#master_data" aria-expanded="true" aria-controls="collapseTwo">
@@ -122,31 +126,13 @@ $data = mysqli_fetch_array($hasil);
           </a>
           <div id="master_data" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-              <a class="collapse-item" href="index.php?page=produk">Produk</a>
-              <a class="collapse-item" href="index.php?page=kategori_produk">Kategori Produk</a>
-              <a class="collapse-item" href="index.php?page=pelanggan">Pelanggan</a>
-              <a class="collapse-item" href="index.php?page=supplier">Supplier</a>
+              <a class="collapse-item" href="index.php?page=produk">Entri Barang</a>
+              <a class="collapse-item" href="index.php?page=pelanggan">Entri Meja</a>
             </div>
           </div>
         </li>
 
-      <?php endif; ?>
 
-      <?php if ($_SESSION["level"] == "Admin") : ?>
-        <!-- Nav Item - Pages Collapse Menu -->
-        
-<li class="nav-item">
-          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pengaturan" aria-expanded="true" aria-controls="collapseTwo">
-            <i class="fas fa-fw fa-cog"></i>
-            <span>Pengaturan</span>
-          </a>
-          <div id="pengaturan" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-              <a class="collapse-item" href="index.php?page=aplikasi">Aplikasi</a>
-
-            </div>
-          </div>
-        </li>
 
       <?php endif; ?>
       <!-- Divider -->
@@ -181,7 +167,7 @@ $data = mysqli_fetch_array($hasil);
                   <div id="date">
                     <script type='text/javascript'>
                       var months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
-                      var myDays = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jum&#39;at', 'Sabtu'];
+                      var myDays = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
                       var date = new Date();
                       var day = date.getDate();
                       var month = date.getMonth();
@@ -321,7 +307,7 @@ $data = mysqli_fetch_array($hasil);
               include "page/aplikasi/index.php";
               break;
             default:
-              echo "<center><h3>Maaf. Halaman tidak di temukan !</h3></center>";
+              echo "<center><h3>Halaman tidak di temukan !</h3></center>";
               break;
           }
         }

@@ -66,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <!-- Custom fonts for this template-->
   <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="assets/font/font.css" rel="stylesheet" type="text/css">
-  <link href='page/aplikasi/logo/shop.png' rel='shortcut icon'>
+  <link href='page/aplikasi/logo/logo1.png' rel='shortcut icon'>
 
   <!-- Custom styles for this template-->
   <link href="assets/css/sb-admin-2.min.css" rel="stylesheet">

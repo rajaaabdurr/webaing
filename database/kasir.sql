@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 05, 2024 at 02:54 PM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.0.28
+-- Waktu pembuatan: 25 Mar 2024 pada 18.40
+-- Versi server: 10.4.32-MariaDB
+-- Versi PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `detail_penjualan`
+-- Struktur dari tabel `detail_penjualan`
 --
 
 CREATE TABLE `detail_penjualan` (
@@ -36,7 +36,7 @@ CREATE TABLE `detail_penjualan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `detail_penjualan`
+-- Dumping data untuk tabel `detail_penjualan`
 --
 
 INSERT INTO `detail_penjualan` (`id_detail_penjualan`, `no_invoice`, `kode_produk`, `harga`, `qty`) VALUES
@@ -175,15 +175,16 @@ INSERT INTO `detail_penjualan` (`id_detail_penjualan`, `no_invoice`, `kode_produ
 (396, '218', 'P0101', 7000, 1),
 (397, '218', 'P0099', 9600, 23),
 (398, '219', 'P0107', 27000, 12),
-(415, 'INV0232', 'P0084', 18800, 15),
-(416, 'INV0233', 'P0110', 6000, 25),
-(417, 'INV0234', 'P0110', 6000, 1),
-(418, 'INV0235', 'P0110', 6500, 1);
+(420, 'INV0235', 'P0142', 100000, 2),
+(422, 'INV0239', 'P0113', 215000, 5),
+(423, 'INV0240', 'P0139', 80000, 1),
+(424, 'INV0001', 'P0001', 35000, 1),
+(425, 'INV0242', 'P0001', 35000, 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kategori_produk`
+-- Struktur dari tabel `kategori_produk`
 --
 
 CREATE TABLE `kategori_produk` (
@@ -192,23 +193,17 @@ CREATE TABLE `kategori_produk` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `kategori_produk`
+-- Dumping data untuk tabel `kategori_produk`
 --
 
 INSERT INTO `kategori_produk` (`id_kt_produk`, `nama_kt_produk`) VALUES
-(20, 'Bahan Masakan'),
-(21, 'Perlengkapan Mandi'),
-(22, 'Sabun Cuci'),
-(23, 'Pembersih Lantai'),
-(24, 'Jajanan Ringan'),
 (26, 'Minuman'),
-(31, 'Indomie'),
 (32, 'Makanan');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `log_aktivitas`
+-- Struktur dari tabel `log_aktivitas`
 --
 
 CREATE TABLE `log_aktivitas` (
@@ -219,7 +214,7 @@ CREATE TABLE `log_aktivitas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `log_aktivitas`
+-- Dumping data untuk tabel `log_aktivitas`
 --
 
 INSERT INTO `log_aktivitas` (`id_aktivitas`, `waktu`, `aktivitas`, `id_pengguna`) VALUES
@@ -711,12 +706,302 @@ INSERT INTO `log_aktivitas` (`id_aktivitas`, `waktu`, `aktivitas`, `id_pengguna`
 (527, '2024-03-05 02:53:13', '', 19),
 (528, '2024-03-05 14:53:49', 'Edit Pelanggan #PN0018 ', 19),
 (529, '2024-03-05 14:53:59', 'Edit Pelanggan #PN0025 ', 19),
-(530, '2024-03-05 14:54:07', 'Edit Pelanggan #PN0026 ', 19);
+(530, '2024-03-05 14:54:07', 'Edit Pelanggan #PN0026 ', 19),
+(531, '2024-03-21 03:30:36', '', 19),
+(536, '2024-03-21 03:44:21', 'Tambah Pengguna (Admin) #PG020 ', 19),
+(537, '2024-03-21 03:45:09', 'Hapus pengguna #PG020 ', 19),
+(538, '2024-03-21 03:45:33', 'Tambah Pengguna (Waiter) #PG020 ', 19),
+(539, '2024-03-21 03:46:52', '', 19),
+(540, '2024-03-21 03:46:57', '', 13),
+(541, '2024-03-21 03:47:09', '', 13),
+(542, '2024-03-21 03:47:13', '', 35),
+(543, '2024-03-21 03:50:25', '', 35),
+(544, '2024-03-21 03:50:38', '', 19),
+(545, '2024-03-21 03:55:45', 'Tambah Pengguna (Owner) #PG036 ', 19),
+(546, '2024-03-21 03:58:31', '', 19),
+(547, '2024-03-21 03:58:36', '', 36),
+(548, '2024-03-21 04:07:28', '', 36),
+(549, '2024-03-21 04:07:59', '', 19),
+(550, '2024-03-21 04:08:05', '', 19),
+(551, '2024-03-21 04:08:09', '', 36),
+(552, '2024-03-21 04:10:15', '', 36),
+(553, '2024-03-21 04:10:19', '', 19),
+(554, '2024-03-21 04:15:57', '', 19),
+(555, '2024-03-21 04:16:10', '', 35),
+(556, '2024-03-21 04:20:33', '', 35),
+(557, '2024-03-21 04:20:37', '', 36),
+(558, '2024-03-21 04:23:44', '', 36),
+(559, '2024-03-21 04:23:49', '', 35),
+(560, '2024-03-21 04:24:33', '', 35),
+(561, '2024-03-21 04:24:39', '', 13),
+(562, '2024-03-21 04:25:19', '', 13),
+(563, '2024-03-21 04:26:54', '', 19),
+(564, '2024-03-21 04:27:20', '', 19),
+(565, '2024-03-21 04:27:34', '', 35),
+(566, '2024-03-21 04:28:00', '', 35),
+(567, '2024-03-21 04:28:05', '', 36),
+(568, '2024-03-21 04:29:47', 'Hapus pengguna #PG020 ', 36),
+(569, '2024-03-21 04:30:12', 'Tambah Pengguna (Waiter) #PG037 ', 36),
+(570, '2024-03-21 04:30:31', '', 36),
+(571, '2024-03-21 04:33:20', '', 19),
+(572, '2024-03-21 04:33:36', '', 19),
+(573, '2024-03-21 04:33:40', '', 37),
+(574, '2024-03-21 04:33:51', '', 37),
+(575, '2024-03-21 04:33:54', '', 13),
+(576, '2024-03-21 04:34:03', '', 13),
+(577, '2024-03-21 04:34:09', '', 36),
+(578, '2024-03-21 04:34:09', '', 36),
+(579, '2024-03-21 04:38:07', '', 36),
+(580, '2024-03-21 04:41:45', '', 19),
+(581, '2024-03-21 04:46:24', '', 19),
+(582, '2024-03-21 04:52:28', '', 36),
+(583, '2024-03-21 04:53:33', '', 36),
+(584, '2024-03-21 04:53:38', '', 19),
+(585, '2024-03-21 04:54:49', '', 19),
+(586, '2024-03-21 04:55:09', '', 37),
+(587, '2024-03-21 05:06:21', '', 37),
+(588, '2024-03-21 05:06:28', '', 37),
+(589, '2024-03-21 05:11:31', '', 37),
+(590, '2024-03-21 05:11:36', '', 36),
+(591, '2024-03-21 05:12:37', 'Tambah Pengguna (Waiter) #PG038 ', 36),
+(592, '2024-03-21 05:12:57', '', 36),
+(593, '2024-03-21 05:13:05', '', 38),
+(594, '2024-03-21 05:13:19', '', 38),
+(595, '2024-03-21 05:13:25', '', 19),
+(596, '2024-03-21 05:13:30', '', 19),
+(597, '2024-03-21 05:13:33', '', 13),
+(598, '2024-03-21 05:14:20', '', 13),
+(599, '2024-03-21 05:18:27', '', 37),
+(600, '2024-03-21 05:18:41', 'Hapus Supplier # SP0009', 37),
+(601, '2024-03-21 05:18:43', 'Hapus Supplier # SP0008', 37),
+(602, '2024-03-21 05:26:08', 'Tambah Supplier # SP0001', 37),
+(603, '2024-03-21 05:31:18', '', 37),
+(604, '2024-03-21 05:31:34', '', 19),
+(605, '2024-03-21 05:37:07', 'Tambah Pelanggan #PN0027 ', 19),
+(606, '2024-03-21 05:37:55', 'Hapus Pelanggan #PN0018 ', 19),
+(607, '2024-03-21 05:40:36', 'Hapus Pelanggan #PN0027 ', 19),
+(608, '2024-03-21 05:40:58', 'Tambah Pelanggan #PN0027 ', 19),
+(609, '2024-03-21 05:41:02', 'Hapus Pelanggan #PN0026 ', 19),
+(610, '2024-03-21 05:41:05', 'Hapus Pelanggan #PN0025 ', 19),
+(611, '2024-03-21 05:41:54', 'Hapus Produk #P0109 ', 19),
+(612, '2024-03-21 05:45:50', 'Edit Produk #P0108 ', 19),
+(616, '2024-03-21 05:48:51', 'Edit Produk #P0108 ', 19),
+(617, '2024-03-21 05:49:00', 'Edit Produk #P0107 ', 19),
+(620, '2024-03-21 05:50:46', 'Hapus Produk #P0101 ', 19),
+(621, '2024-03-21 05:50:50', 'Hapus Produk #P0107 ', 19),
+(622, '2024-03-21 05:50:53', 'Hapus Produk #P0106 ', 19),
+(623, '2024-03-21 05:50:56', 'Hapus Produk #P0105 ', 19),
+(624, '2024-03-21 05:50:58', 'Hapus Produk #P0104 ', 19),
+(625, '2024-03-21 05:51:01', 'Hapus Produk #P0103 ', 19),
+(626, '2024-03-21 05:51:03', 'Hapus Produk #P0102 ', 19),
+(627, '2024-03-21 05:51:15', '', 19),
+(628, '2024-03-21 05:51:25', '', 13),
+(629, '2024-03-21 05:51:36', '', 13),
+(630, '2024-03-21 05:51:51', '', 36),
+(631, '2024-03-21 05:51:56', '', 36),
+(632, '2024-03-21 05:52:01', '', 37),
+(633, '2024-03-21 05:52:35', '', 37),
+(634, '2024-03-21 05:53:31', '', 37),
+(635, '2024-03-21 05:54:25', '', 37),
+(636, '2024-03-21 05:54:30', '', 19),
+(637, '2024-03-21 05:54:36', '', 19),
+(638, '2024-03-21 05:54:40', '', 13),
+(639, '2024-03-21 05:55:00', 'Input penjualan No Invoice #INV0236 ', 13),
+(640, '2024-03-21 05:55:51', '', 13),
+(641, '2024-03-21 05:56:04', '', 19),
+(642, '2024-03-21 05:59:22', 'Tambah Produk #P0113 ', 19),
+(643, '2024-03-21 05:59:39', 'Edit Produk #P0110 ', 19),
+(644, '2024-03-21 05:59:46', 'Hapus Produk #P0108 ', 19),
+(645, '2024-03-21 06:00:15', 'Tambah Produk #P0114 ', 19),
+(646, '2024-03-21 06:01:29', 'Edit Pelanggan #PN0027 ', 19),
+(647, '2024-03-21 06:04:12', '', 19),
+(648, '2024-03-21 06:04:19', '', 37),
+(649, '2024-03-21 06:14:55', 'Edit Produk #P0114 ', 37),
+(650, '2024-03-21 06:19:33', 'Edit Produk #P0113 ', 37),
+(651, '2024-03-21 06:20:11', 'Edit Produk #P0110 ', 37),
+(652, '2024-03-21 06:20:18', 'Edit Produk #P0110 ', 37),
+(653, '2024-03-21 06:21:02', 'Edit Produk #P0113 ', 37),
+(654, '2024-03-21 06:21:18', 'Edit Produk #P0114 ', 37),
+(655, '2024-03-21 06:22:18', 'Tambah Produk #P0115 ', 37),
+(656, '2024-03-21 06:23:09', 'Tambah Produk #P0116 ', 37),
+(657, '2024-03-21 06:23:57', 'Tambah Produk #P0117 ', 37),
+(658, '2024-03-21 06:25:06', 'Tambah Produk #P0118 ', 37),
+(659, '2024-03-21 06:27:36', 'Tambah Produk #P0119 ', 37),
+(660, '2024-03-21 06:29:57', 'Tambah Produk #P0120 ', 37),
+(661, '2024-03-21 06:30:43', 'Tambah Produk #P0121 ', 37),
+(662, '2024-03-21 06:31:08', 'Tambah Produk #P0122 ', 37),
+(663, '2024-03-21 06:31:25', 'Edit Pelanggan #PN0027 ', 37),
+(664, '2024-03-21 06:40:42', '', 37),
+(665, '2024-03-21 06:40:43', '', 37),
+(666, '2024-03-21 06:41:03', '', 37),
+(667, '2024-03-21 06:41:07', '', 19),
+(668, '2024-03-21 06:41:47', 'Hapus Produk #P0117 ', 19),
+(669, '2024-03-21 06:41:50', 'Hapus Produk #P0122 ', 19),
+(670, '2024-03-21 06:41:53', 'Hapus Produk #P0121 ', 19),
+(671, '2024-03-21 06:41:57', 'Hapus Produk #P0116 ', 19),
+(672, '2024-03-21 06:41:59', 'Hapus Produk #P0120 ', 19),
+(673, '2024-03-21 06:42:26', 'Hapus Produk #P0118 ', 19),
+(674, '2024-03-21 06:42:29', 'Hapus Produk #P0119 ', 19),
+(675, '2024-03-21 06:42:42', 'Hapus Produk #P0114 ', 19),
+(676, '2024-03-21 06:42:44', 'Hapus Produk #P0115 ', 19),
+(677, '2024-03-21 06:42:46', 'Hapus Produk #P0113 ', 19),
+(678, '2024-03-21 06:46:21', 'Tambah Produk #P0113 ', 19),
+(679, '2024-03-21 06:46:31', 'Hapus Produk #P0110 ', 19),
+(680, '2024-03-21 06:46:43', 'Edit Produk #P0113 ', 19),
+(681, '2024-03-21 06:47:20', 'Tambah Produk #P0124 ', 19),
+(682, '2024-03-21 06:50:56', 'Tambah Produk #P0125 ', 19),
+(683, '2024-03-21 06:51:14', 'Edit Produk #P0125 ', 19),
+(684, '2024-03-21 06:51:56', 'Tambah Produk #P0126 ', 19),
+(685, '2024-03-21 06:52:56', 'Tambah Produk #P0127 ', 19),
+(686, '2024-03-21 06:53:41', 'Tambah Produk #P0128 ', 19),
+(687, '2024-03-21 06:54:29', 'Tambah Produk #P0129 ', 19),
+(688, '2024-03-21 06:55:10', 'Tambah Produk #P0130 ', 19),
+(689, '2024-03-21 06:58:09', 'Tambah Produk #P0131 ', 19),
+(690, '2024-03-21 06:58:58', 'Tambah Produk #P0132 ', 19),
+(691, '2024-03-21 07:00:17', 'Tambah Produk #P0133 ', 19),
+(692, '2024-03-21 07:01:14', 'Tambah Produk #P0134 ', 19),
+(693, '2024-03-21 07:01:54', 'Tambah Produk #P0135 ', 19),
+(694, '2024-03-21 07:02:30', 'Tambah Produk #P0136 ', 19),
+(695, '2024-03-21 07:02:59', 'Tambah Produk #P0137 ', 19),
+(696, '2024-03-21 07:03:25', 'Tambah Produk #P0138 ', 19),
+(697, '2024-03-21 07:03:55', 'Tambah Produk #P0139 ', 19),
+(698, '2024-03-21 07:04:21', 'Tambah Produk #P0140 ', 19),
+(699, '2024-03-21 07:05:04', 'Tambah Produk #P0141 ', 19),
+(700, '2024-03-21 07:05:41', 'Tambah Produk #P0142 ', 19),
+(701, '2024-03-21 07:06:49', 'Tambah Pelanggan #PN0029 ', 19),
+(702, '2024-03-21 07:06:53', 'Hapus Pelanggan #PN0027 ', 19),
+(703, '2024-03-21 07:08:07', '', 19),
+(704, '2024-03-21 07:08:12', '', 13),
+(705, '2024-03-21 07:08:00', 'Input penjualan No Invoice #INV0235 ', 13),
+(706, '2024-03-21 07:12:56', '', 13),
+(707, '2024-03-21 07:13:01', '', 37),
+(708, '2024-03-21 07:13:08', '', 37),
+(709, '2024-03-21 07:13:17', '', 36),
+(710, '2024-03-21 07:14:07', '', 36),
+(711, '2024-03-21 07:14:10', '', 37),
+(712, '2024-03-21 07:14:19', '', 37),
+(713, '2024-03-21 07:14:21', '', 13),
+(714, '2024-03-21 07:18:37', '', 13),
+(715, '2024-03-21 07:22:16', '', 13),
+(716, '2024-03-21 07:27:55', '', 13),
+(717, '2024-03-21 07:31:04', '', 13),
+(718, '2024-03-21 07:33:09', '', 13),
+(719, '2024-03-21 07:33:11', '', 19),
+(720, '2024-03-21 07:33:46', '', 19),
+(721, '2024-03-21 07:33:54', '', 36),
+(722, '2024-03-21 07:34:40', '', 36),
+(723, '2024-03-21 07:35:38', '', 36),
+(724, '2024-03-21 07:43:24', '', 36),
+(725, '2024-03-21 07:43:27', '', 36),
+(726, '2024-03-21 07:51:31', '', 36),
+(727, '2024-03-21 07:51:35', '', 36),
+(728, '2024-03-21 07:52:57', '', 36),
+(729, '2024-03-21 07:54:19', '', 19),
+(730, '2024-03-21 07:56:57', '', 19),
+(731, '2024-03-21 07:59:26', '', 19),
+(732, '2024-03-22 02:30:21', '', 19),
+(733, '2024-03-22 02:31:04', '', 19),
+(734, '2024-03-22 02:31:09', '', 36),
+(735, '2024-03-22 02:31:28', '', 36),
+(736, '2024-03-22 02:31:36', '', 13),
+(737, '2024-03-22 14:32:00', 'Input penjualan No Invoice #INV0238 ', 13),
+(738, '2024-03-22 02:33:11', '', 13),
+(739, '2024-03-22 02:33:18', '', 37),
+(740, '2024-03-22 14:38:49', 'Tambah Pelanggan #PN0030 ', 37),
+(741, '2024-03-22 02:45:13', '', 37),
+(742, '2024-03-22 02:45:21', '', 13),
+(743, '2024-03-22 14:46:00', 'Input penjualan No Invoice #INV0239 ', 13),
+(744, '2024-03-22 02:47:21', '', 13),
+(745, '2024-03-22 02:47:49', '', 19),
+(746, '2024-03-22 02:50:49', '', 19),
+(747, '2024-03-22 02:50:57', '', 13),
+(748, '2024-03-22 02:51:41', '', 13),
+(749, '2024-03-22 02:51:50', '', 37),
+(750, '2024-03-22 02:52:20', '', 37),
+(751, '2024-03-22 02:52:40', '', 36),
+(752, '2024-03-22 02:53:06', '', 36),
+(753, '2024-03-22 03:14:57', '', 13),
+(754, '2024-03-22 03:18:41', '', 13),
+(755, '2024-03-22 03:19:04', '', 13),
+(756, '2024-03-22 06:08:55', '', 19),
+(757, '2024-03-22 18:14:44', 'Hapus Produk #P0142 ', 19),
+(758, '2024-03-22 18:14:48', 'Hapus Produk #P0141 ', 19),
+(759, '2024-03-22 18:14:50', 'Hapus Produk #P0140 ', 19),
+(760, '2024-03-22 06:15:49', '', 19),
+(761, '2024-03-22 06:15:55', '', 13),
+(762, '2024-03-22 18:17:00', 'Input penjualan No Invoice #INV0240 ', 13),
+(763, '2024-03-22 06:18:00', '', 13),
+(764, '2024-03-22 06:18:11', '', 36),
+(765, '2024-03-22 06:19:30', '', 36),
+(766, '2024-03-22 06:19:53', '', 19),
+(767, '2024-03-22 06:20:15', '', 19),
+(768, '2024-03-22 06:20:21', '', 37),
+(769, '2024-03-22 06:20:54', '', 37),
+(770, '2024-03-22 06:20:59', '', 19),
+(771, '2024-03-22 18:21:24', 'Edit Pelanggan #PN0030 ', 19),
+(772, '2024-03-22 18:21:34', 'Hapus Pelanggan #PN0029 ', 19),
+(773, '2024-03-22 06:21:46', '', 19),
+(774, '2024-03-22 06:21:53', '', 37),
+(775, '2024-03-22 18:22:25', 'Tambah Pelanggan #PN0031 ', 37),
+(776, '2024-03-22 18:22:42', 'Edit Pelanggan #PN0031 ', 37),
+(777, '2024-03-22 18:23:50', 'Edit Pelanggan #PN0031 ', 37),
+(778, '2024-03-22 06:26:35', '', 37),
+(779, '2024-03-22 06:26:41', '', 13),
+(780, '2024-03-22 06:27:22', '', 13),
+(781, '2024-03-22 06:27:31', '', 37),
+(782, '2024-03-22 18:27:52', 'Hapus Produk #P0130 ', 37),
+(783, '2024-03-22 18:27:57', 'Hapus Produk #P0113 ', 37),
+(784, '2024-03-22 18:28:03', 'Hapus Produk #P0124 ', 37),
+(785, '2024-03-22 18:28:08', 'Hapus Produk #P0139 ', 37),
+(786, '2024-03-22 18:28:29', 'Hapus Pelanggan #PN0031 ', 37),
+(787, '2024-03-22 18:28:32', 'Hapus Pelanggan #PN0030 ', 37),
+(788, '2024-03-22 18:28:47', 'Hapus Produk #P0128 ', 37),
+(789, '2024-03-22 18:28:51', 'Hapus Produk #P0133 ', 37),
+(790, '2024-03-22 18:28:55', 'Hapus Produk #P0138 ', 37),
+(791, '2024-03-22 18:29:06', 'Hapus Produk #P0137 ', 37),
+(792, '2024-03-22 18:29:09', 'Hapus Produk #P0136 ', 37),
+(793, '2024-03-22 18:29:13', 'Hapus Produk #P0135 ', 37),
+(794, '2024-03-22 18:29:17', 'Hapus Produk #P0134 ', 37),
+(795, '2024-03-22 18:29:22', 'Hapus Produk #P0132 ', 37),
+(796, '2024-03-22 18:29:27', 'Hapus Produk #P0131 ', 37),
+(797, '2024-03-22 18:29:31', 'Hapus Produk #P0129 ', 37),
+(798, '2024-03-22 18:29:35', 'Hapus Produk #P0127 ', 37),
+(799, '2024-03-22 18:29:39', 'Hapus Produk #P0126 ', 37),
+(800, '2024-03-22 18:29:44', 'Hapus Produk #P0125 ', 37),
+(801, '2024-03-22 06:31:10', '', 37),
+(802, '2024-03-22 06:31:15', '', 19),
+(803, '2024-03-22 18:42:38', 'Tambah Pelanggan #PN0001 ', 19),
+(804, '2024-03-22 18:48:06', 'Tambah Produk #P0001 ', 19),
+(805, '2024-03-22 06:50:03', '', 19),
+(806, '2024-03-22 06:50:08', '', 37),
+(807, '2024-03-22 06:51:05', '', 37),
+(808, '2024-03-22 06:51:10', '', 13),
+(809, '2024-03-22 18:51:00', 'Input penjualan No Invoice #INV0001 ', 13),
+(810, '2024-03-22 18:52:00', 'Input penjualan No Invoice #INV0242 ', 13),
+(811, '2024-03-22 06:53:17', '', 13),
+(812, '2024-03-22 06:53:27', '', 19),
+(813, '2024-03-22 06:53:32', '', 19),
+(814, '2024-03-22 06:53:37', '', 37),
+(815, '2024-03-22 18:54:01', 'Tambah Pelanggan #PN0033 ', 37),
+(816, '2024-03-22 06:54:37', '', 37),
+(817, '2024-03-22 06:56:09', '', 19),
+(818, '2024-03-25 06:34:34', '', 19),
+(819, '2024-03-25 06:34:45', '', 13),
+(820, '2024-03-25 06:36:52', '', 13),
+(821, '2024-03-25 06:36:59', '', 19),
+(822, '2024-03-25 06:37:25', '', 19),
+(823, '2024-03-25 06:37:34', '', 36),
+(824, '2024-03-25 18:38:31', 'Tambah Pengguna (Kasir) #PG039 ', 36),
+(825, '2024-03-25 06:38:45', '', 36),
+(826, '2024-03-25 06:39:10', '', 36),
+(827, '2024-03-25 18:39:38', 'Tambah Pengguna (Waiter) #PG040 ', 36),
+(828, '2024-03-25 06:39:45', '', 36),
+(829, '2024-03-25 06:39:51', '', 40);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pelanggan`
+-- Struktur dari tabel `pelanggan`
 --
 
 CREATE TABLE `pelanggan` (
@@ -731,18 +1016,17 @@ CREATE TABLE `pelanggan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `pelanggan`
+-- Dumping data untuk tabel `pelanggan`
 --
 
 INSERT INTO `pelanggan` (`id_pelanggan`, `kode_pelanggan`, `nama_pelanggan`, `no_telp`, `alamat_pelanggan`, `jenis_kelamin`, `tanggal_lahir`, `status`) VALUES
-(24, 'PN0018', 'Naufal', '08514341312', 'JAJAWAR', 1, '2006-09-12', 1),
-(25, 'PN0025', 'Salman', '0854321664', 'Cisaga', 1, '2006-09-14', 1),
-(26, 'PN0026', 'Yanu', '085424244424', 'Ciopat', 1, '2006-01-19', 1);
+(32, 'PN0001', 'tamara', '098765', 'dfasd', 2, '2024-03-23', 1),
+(33, 'PN0033', 'raja', '109831323', 'dhbksbshdbv', 1, '2024-03-23', 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pengguna`
+-- Struktur dari tabel `pengguna`
 --
 
 CREATE TABLE `pengguna` (
@@ -759,18 +1043,23 @@ CREATE TABLE `pengguna` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `pengguna`
+-- Dumping data untuk tabel `pengguna`
 --
 
 INSERT INTO `pengguna` (`id_pengguna`, `kode_pengguna`, `nama_pengguna`, `email`, `no_telp`, `foto`, `username`, `password`, `level`, `status`) VALUES
 (13, 'U013', 'KASIR', 'kasir@gmail.com', '08239284343', 'pengguna_default.png', 'kasir', '202cb962ac59075b964b07152d234b70', 'Kasir', 1),
 (15, 'U014', 'mazid', 'mazid@gmail.com', '082322230343', 'admin.png', 'manajer', '202cb962ac59075b964b07152d234b70', 'Manajer', 1),
-(19, 'U016', 'ADMIN', 'admin@gmail.com', '08131343124', 'admin.png', 'admin', '202cb962ac59075b964b07152d234b70', 'Admin', 1);
+(19, 'U016', 'ADMIN', 'admin@gmail.com', '08131343124', 'admin.png', 'admin', '202cb962ac59075b964b07152d234b70', 'Admin', 1),
+(36, 'PG036', 'Owner', 'owner@gmail.com', '081806061666', 'pengguna_default.png', 'owner', '202cb962ac59075b964b07152d234b70', 'Owner', 1),
+(37, 'PG037', 'Waiter', 'waiter@gmail.com', '083242532454', 'pengguna_default.png', 'waiter', '202cb962ac59075b964b07152d234b70', 'Waiter', 1),
+(38, 'PG038', 'Waiter2', 'waiter2@gmail.com', '09786856785675', 'pengguna_default.png', 'waiter2', '202cb962ac59075b964b07152d234b70', 'Waiter', 1),
+(39, 'PG039', 'raja', 'sutan@gmail.com', '09112387684', 'pengguna_default.png', 'kasir1', '6c14da109e294d1e8155be8aa4b1ce8e', 'Kasir', 1),
+(40, 'PG040', 'raja', 'rajabae10@gmail.com', '09112387684', 'pengguna_default.png', 'raja', '202cb962ac59075b964b07152d234b70', 'Waiter', 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `penjualan`
+-- Struktur dari tabel `penjualan`
 --
 
 CREATE TABLE `penjualan` (
@@ -785,19 +1074,16 @@ CREATE TABLE `penjualan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `penjualan`
+-- Dumping data untuk tabel `penjualan`
 --
 
 INSERT INTO `penjualan` (`id_penjualan`, `no_invoice`, `tanggal`, `id_kasir`, `kode_pelanggan`, `total_bayar`, `bayar`, `kembali`) VALUES
-(232, 'INV0232', '2024-03-01 16:45:00', 13, '1', 282000, 300000, 18000),
-(233, 'INV0233', '2024-03-01 17:06:00', 13, '1', 150000, 200000, 50000),
-(234, 'INV0234', '2024-03-03 11:02:00', 13, '1', 6000, 10000, 4000),
-(235, 'INV0235', '2024-03-04 09:05:00', 13, 'PN0025', 6500, 20000, 13500);
+(242, 'INV0242', '2024-03-22 11:52:00', 13, 'PN0001', 35000, 100000, 65000);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `produk`
+-- Struktur dari tabel `produk`
 --
 
 CREATE TABLE `produk` (
@@ -816,25 +1102,16 @@ CREATE TABLE `produk` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `produk`
+-- Dumping data untuk tabel `produk`
 --
 
 INSERT INTO `produk` (`id_produk`, `kode_produk`, `nama_produk`, `satuan`, `kategori_produk`, `stok_produk`, `supplier`, `harga_beli`, `harga_jual`, `keterangan_produk`, `tanggal_produk`, `gambar_produk`) VALUES
-(101, 'P0101', 'Ciptadent Pasta Gigi  190g', 'pcs', 21, 0, 0, 6400, 7000, '', '2020-11-27', 'CIPTADENT Pasta Gigi Fresh Tube 190g.PNG'),
-(102, 'P0102', 'Wipol Karbol Classic Pine 780ml', 'pcs', 23, 7, 0, 10000, 11000, '', '2020-11-27', 'WIPOL Karbol Classic Pine Refill 780ml.PNG'),
-(103, 'P0103', 'Cap Lang 60ml', 'botol', 0, 0, 8, 8900, 10000, '', '2020-11-27', 'CAP LANG Minyak Kayu Putih no 2 60ml.PNG'),
-(104, 'P0104', 'Molto Eau De Parfum 720m', 'pcs', 22, 76, 8, 25000, 26700, '', '2020-11-27', 'MOLTO Eau De Parfum Pink Luxury Rose 720ml.PNG'),
-(105, 'P0105', 'Frisan Flag Coklat Box - 800gr', 'pcs', 26, 78, 8, 26000, 27000, '', '2020-11-27', 'FRISIAN FLAG Purefarm Coklat Box - 800gr.PNG'),
-(106, 'P0106', 'Attack Jaz1 1.7kg', 'pcs', 22, 5, 8, 30000, 32000, '', '2020-11-27', 'ATTACK JAZ1 Pesona Segar 1.7kg.PNG'),
-(107, 'P0107', 'Attack Hygiene Plus', 'pcs', 22, 26, 0, 25500, 27000, '', '2020-11-27', 'ATTACK Hygiene Plus Protection Liquid Detergent Pouch 1.2l.PNG'),
-(108, 'P0108', 'Attack Easy Liquid 1l', 'pcs', 22, 48, 8, 26500, 27200, '', '2020-11-27', 'ATTACK Easy Liquid Purple Blossom 1l.PNG'),
-(109, 'P0109', 'Pantene Shampoo 400ml', 'botol', 21, 11, 8, 41200, 42300, '', '2020-11-27', 'PANTENE Shampoo Anti Dandruff 400ml.PNG'),
-(112, 'P0110', 'Sari Roti', 'pcs', 32, 99, 8, 5000, 6500, '', '2024-03-04', 'gambar_default.png');
+(143, 'P0001', 'Sate Ayam', 'porsi', 32, 28, 0, 30000, 35000, 'enak amay', '2024-03-22', 'gambar_default.png');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `profil_aplikasi`
+-- Struktur dari tabel `profil_aplikasi`
 --
 
 CREATE TABLE `profil_aplikasi` (
@@ -846,145 +1123,136 @@ CREATE TABLE `profil_aplikasi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `profil_aplikasi`
+-- Dumping data untuk tabel `profil_aplikasi`
 --
 
 INSERT INTO `profil_aplikasi` (`id`, `nama_aplikasi`, `alamat`, `no_telp`, `logo`) VALUES
-(0, 'Warung YAN', 'CIOPAT JAWA TENGAH', '085134324602', 'logokasir.png');
+(0, 'Mamma Mia Trattoria', 'South Jakarta, Indonesia', '085134324602', 'logo.png');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `supplier`
+-- Struktur dari tabel `supplier`
 --
 
 CREATE TABLE `supplier` (
   `id_supplier` int(11) NOT NULL,
   `kode_supplier` char(9) NOT NULL,
   `nama_supplier` varchar(50) NOT NULL,
-  `no_telp` char(14) NOT NULL,
-  `alamat_supplier` varchar(100) NOT NULL,
-  `status` int(11) NOT NULL
+  `no_telp` char(50) NOT NULL,
+  `nomor` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `supplier`
---
-
-INSERT INTO `supplier` (`id_supplier`, `kode_supplier`, `nama_supplier`, `no_telp`, `alamat_supplier`, `status`) VALUES
-(8, 'SP0008', 'AL-BAROKAH', '087823293222', 'BANJAR', 1),
-(12, 'SP0009', 'TOKO YANU', '0518454561', 'DS CIOPAT', 1);
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `detail_penjualan`
+-- Indeks untuk tabel `detail_penjualan`
 --
 ALTER TABLE `detail_penjualan`
   ADD PRIMARY KEY (`id_detail_penjualan`);
 
 --
--- Indexes for table `kategori_produk`
+-- Indeks untuk tabel `kategori_produk`
 --
 ALTER TABLE `kategori_produk`
   ADD PRIMARY KEY (`id_kt_produk`);
 
 --
--- Indexes for table `log_aktivitas`
+-- Indeks untuk tabel `log_aktivitas`
 --
 ALTER TABLE `log_aktivitas`
   ADD PRIMARY KEY (`id_aktivitas`);
 
 --
--- Indexes for table `pelanggan`
+-- Indeks untuk tabel `pelanggan`
 --
 ALTER TABLE `pelanggan`
   ADD PRIMARY KEY (`id_pelanggan`),
   ADD UNIQUE KEY `kode_pelanggan` (`kode_pelanggan`);
 
 --
--- Indexes for table `pengguna`
+-- Indeks untuk tabel `pengguna`
 --
 ALTER TABLE `pengguna`
   ADD PRIMARY KEY (`id_pengguna`);
 
 --
--- Indexes for table `penjualan`
+-- Indeks untuk tabel `penjualan`
 --
 ALTER TABLE `penjualan`
   ADD PRIMARY KEY (`id_penjualan`),
   ADD UNIQUE KEY `no_invoice` (`no_invoice`);
 
 --
--- Indexes for table `produk`
+-- Indeks untuk tabel `produk`
 --
 ALTER TABLE `produk`
   ADD PRIMARY KEY (`id_produk`),
   ADD UNIQUE KEY `kode_produk` (`kode_produk`);
 
 --
--- Indexes for table `profil_aplikasi`
+-- Indeks untuk tabel `profil_aplikasi`
 --
 ALTER TABLE `profil_aplikasi`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `supplier`
+-- Indeks untuk tabel `supplier`
 --
 ALTER TABLE `supplier`
   ADD PRIMARY KEY (`id_supplier`),
   ADD UNIQUE KEY `kode_supplier` (`kode_supplier`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `detail_penjualan`
+-- AUTO_INCREMENT untuk tabel `detail_penjualan`
 --
 ALTER TABLE `detail_penjualan`
-  MODIFY `id_detail_penjualan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=419;
+  MODIFY `id_detail_penjualan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=426;
 
 --
--- AUTO_INCREMENT for table `kategori_produk`
+-- AUTO_INCREMENT untuk tabel `kategori_produk`
 --
 ALTER TABLE `kategori_produk`
   MODIFY `id_kt_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
--- AUTO_INCREMENT for table `log_aktivitas`
+-- AUTO_INCREMENT untuk tabel `log_aktivitas`
 --
 ALTER TABLE `log_aktivitas`
-  MODIFY `id_aktivitas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=531;
+  MODIFY `id_aktivitas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=830;
 
 --
--- AUTO_INCREMENT for table `pelanggan`
+-- AUTO_INCREMENT untuk tabel `pelanggan`
 --
 ALTER TABLE `pelanggan`
-  MODIFY `id_pelanggan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id_pelanggan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
--- AUTO_INCREMENT for table `pengguna`
+-- AUTO_INCREMENT untuk tabel `pengguna`
 --
 ALTER TABLE `pengguna`
-  MODIFY `id_pengguna` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id_pengguna` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
--- AUTO_INCREMENT for table `penjualan`
+-- AUTO_INCREMENT untuk tabel `penjualan`
 --
 ALTER TABLE `penjualan`
-  MODIFY `id_penjualan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=236;
+  MODIFY `id_penjualan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=243;
 
 --
--- AUTO_INCREMENT for table `produk`
+-- AUTO_INCREMENT untuk tabel `produk`
 --
 ALTER TABLE `produk`
-  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=113;
+  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=144;
 
 --
--- AUTO_INCREMENT for table `supplier`
+-- AUTO_INCREMENT untuk tabel `supplier`
 --
 ALTER TABLE `supplier`
   MODIFY `id_supplier` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;

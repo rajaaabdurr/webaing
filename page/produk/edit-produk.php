@@ -119,7 +119,7 @@ if (isset($_POST['edit_produk'])) {
                       <input name="id_produk" value="<?php echo $id_produk; ?>" type="hidden" class="form-control">
                 </div>
                 <div class="form-group">
-                      <label>Nama Produk:</label>
+                      <label>Menu:</label>
                       <input name="nama_produk" value="<?php echo $nama_produk; ?>" type="text" class="form-control" placeholder="Masukan nama" required>
                 </div>
             </div>
@@ -164,8 +164,8 @@ if (isset($_POST['edit_produk'])) {
         <div class="row">
             <div class="col-sm-6">
                 <div class="form-group">
-                    <label>Harga Beli:</label>
-                    <input name="harga_beli" value="<?php echo $harga_beli; ?>" type="number" class="form-control" placeholder="Masukan harga beli" required>
+                    <label>Harga Normal:</label>
+                    <input name="harga_beli" value="<?php echo $harga_beli; ?>" type="number" class="form-control" placeholder="Masukan harga normal" required>
                 </div>
             </div>
             <div class="col-sm-6">
@@ -176,12 +176,7 @@ if (isset($_POST['edit_produk'])) {
             </div>
         </div>
 
-        <!-- rows -->   
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="form-group">
-                    <label>Dari Suplier:</label>
-                    <select name="supplier" class="form-control">
+    
                         <!-- Menampilkan daftar kategori produk di dalam select list -->
                         <?php
                         $sql="select * from supplier order by id_supplier desc";
@@ -197,25 +192,6 @@ if (isset($_POST['edit_produk'])) {
             </div>
         </div>
 
-        <!-- rows -->                 
-        <div class="row">
-            <div class="col-sm-6">
-                <label>Gambar Saat ini:</label><br>
-                <img src="page/produk/gambar/<?php echo $gambar_produk;?>" width="90%" class="rounded" alt="Cinque Terre">
-                <input type="hidden" name="gambar_saat_ini" value="<?php echo $gambar_produk;?>" class="form-control" />
-            </div>
-            <div class="col-sm-6">
-                <div id="msg"></div>
-                <label>Gambar Baru:</label>
-                <input type="file" name="gambar_baru" class="file" >
-                    <div class="input-group my-3">
-                        <input type="text" class="form-control" disabled placeholder="Upload File" id="file">
-                        <div class="input-group-append">
-                                <button type="button" id="pilih_gambar" class="browse btn btn-dark">Pilih</button>
-                        </div>
-                    </div>
-                <img src="assets/img/img80.png" id="preview" class="img-thumbnail">
-            </div>
         </div>
         
         <!-- rows -->   
